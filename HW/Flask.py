@@ -45,10 +45,10 @@ def csv_file():
             answer_w += num_w
     return flask.render_template(
         "task3.html",
-        ans_h_cm=(answer_h * 2.54) / 25000,
-        ans_w_kg=(answer_w * 0.45359237) / 25000,
-        ans_h_inches=answer_h / 25000,
-        ans_w_pounds=answer_w / 25000
+        ans_h_cm=(answer_h * 2.54) / (len(reader) - 1),
+        ans_w_kg=(answer_w * 0.45359237) / (len(reader) - 1),
+        ans_h_inches=answer_h / (len(reader) - 1),
+        ans_w_pounds=answer_w / (len(reader) - 1),
     )
 
 
